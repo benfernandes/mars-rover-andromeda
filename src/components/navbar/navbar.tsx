@@ -5,15 +5,14 @@ import './Navbar.scss';
 
 function Navbar() {
     const [navbarOpen, setNavBarOpen] = useState(false);
-    const [navbarTranslucent, setNavbarTranslucent] = useState(false);
 
     function toggleNavbar() {
         console.log("toggle");
         setNavBarOpen(current => !current);
-    }
+    }  
 
     return (
-        <nav className={`navbar ${navbarOpen ? "open" : "closed"} ${navbarTranslucent ? "translucent" : "opaque"}`} onScroll={toggleOpacity}>
+        <nav className={`navbar ${navbarOpen ? "open" : "closed"}`}>
             <button className="nav-button hamburger-button" onClick={toggleNavbar}>
                 <GoThreeBars color="white" />
             </button>
