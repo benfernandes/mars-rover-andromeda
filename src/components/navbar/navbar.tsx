@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { GoThreeBars } from "react-icons/go";
 import './Navbar.scss';
@@ -11,10 +11,6 @@ function Navbar() {
         console.log("toggle");
         setNavBarOpen(current => !current);
     }
-
-    function toggleOpacity() {
-        setNavbarTranslucent(window.scrollY > 20);
-    }    
 
     return (
         <nav className={`navbar ${navbarOpen ? "open" : "closed"} ${navbarTranslucent ? "translucent" : "opaque"}`} onScroll={toggleOpacity}>
