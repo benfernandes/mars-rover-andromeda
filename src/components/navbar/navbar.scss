@@ -1,4 +1,5 @@
 $theme-purple-1: #402343;
+$theme-purple-2: #644679;
 $theme-green-1: #1FAC29;
 
 .navbar {
@@ -49,6 +50,7 @@ $theme-green-1: #1FAC29;
 
 .hamburger-button {
     width: 32px;
+    background-color: $theme-purple-2;
 }
 
 .nav-list {
