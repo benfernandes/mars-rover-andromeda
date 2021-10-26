@@ -1,26 +1,43 @@
-import React, { useState } from "react";
-import {Link} from "react-router-dom";
-import './navbar.scss';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { GoThreeBars } from "react-icons/go";
+import './Navbar.scss';
 
 function Navbar() {
     const [navbarOpen, setNavBarOpen] = useState(false);
+    const [navbarTranslucent, setNavbarTranslucent] = useState(false);
 
     function toggleNavbar() {
+        console.log("toggle");
         setNavBarOpen(current => !current);
     }
 
+    function toggleOpacity() {
+        setNavbarTranslucent(window.scrollY > 20);
+    }    
+
     return (
-        <nav className={`navbar${navbarOpen ? " showMenu" : ""}`}>
-            <button className={"burger-button"} onClick={toggleNavbar}>{navbarOpen ? "Close" : "Open"}</button>
-            <ul>
+        <nav className={`navbar ${navbarOpen ? "open" : "closed"} ${navbarTranslucent ? "translucent" : "opaque"}`} onScroll={toggleOpacity}>
+            <button className="nav-button hamburger-button" onClick={toggleNavbar}>
+                <GoThreeBars color="white" />
+            </button>
+            <ul className="nav-list" >
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link className="nav-button" onClick={toggleNavbar} to="/">
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/earth">Earth</Link>
+                    <Link className="nav-button" onClick={toggleNavbar} to="/earth">
+                        Earth
+                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/59788/earth-planet-clipart-md.png" width="25" alt="earth" />
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/mars">Mars</Link>
+                    <Link className="nav-button" onClick={toggleNavbar} to="/mars">
+                        Mars
+                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1556252/planet-mars-clipart-xl.png" width="25" alt="mars" />
+                    </Link>
                 </li>
             </ul>
         </nav>

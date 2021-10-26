@@ -1,12 +1,10 @@
-import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import './App.scss';
-import Navbar from './components/navbar/navbar';
+import Navbar from "./components/navbar/Navbar";
 import Home from './views/Home';
 
 function App() {

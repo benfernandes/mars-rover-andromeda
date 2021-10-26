@@ -1,11 +1,75 @@
+$theme-purple-1: #402343;
+$theme-green-1: #1FAC29;
+
 .navbar {
+    padding: 5px;
+    background-color: $theme-purple-1;
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
-    ul {
-        list-style: none;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom-left-radius: 6px;
+    border: 2px solid white;
+    border-top: none;
+    border-right: none;
+    transition: opacity 0.2s;
+    .translucent {
+        opacity: 0.8;
     }
-    .burger-button {
-        background-color: black;
-        color: white;
-        width: 4rem;
+}
+
+.open .nav-list li {
+    width: 204px;
+}
+
+.closed .nav-list li {
+    height: 0;
+    opacity: 0;
+}
+
+.planet-icon {
+    margin-left: 5px;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: transparent;
+    margin: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hamburger-button {
+    width: 32px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+    li {
+        transition: all 0.5s;
+        height: 36px;
+        width: 36px;
+        a {
+            width: calc(100% - 4px);
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .nav-list {
+        flex-direction: row;
     }
 }
