@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -8,10 +9,20 @@ import {
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import Home from './views/Home';
+=======
+import React, {useEffect, useState } from 'react';
+import './App.scss';
+>>>>>>> Stashed changes
+import { DailyPhoto } from './components/Potd/Potd.component';
+
 
 function App() {
+
+  
+
   return (
     <div className="App">
+<<<<<<< Updated upstream
       <Router>
         <Navbar />
         <Switch>
@@ -26,6 +37,9 @@ function App() {
           </Route>
         </Switch>
       </Router>
+=======
+      <DailyPhoto/>
+>>>>>>> Stashed changes
     </div>
   );
 }
