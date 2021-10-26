@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './App.scss';
 import Navbar from './components/navbar/navbar';
+import Home from './views/Home';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             <p>Mars</p>
           </Route>
           <Route path="/">
-            <p>Home</p>
+            <Home />
           </Route>
         </Switch>
       </Router>
