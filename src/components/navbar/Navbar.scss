@@ -117,6 +117,7 @@ $theme-green-1: #1FAC29;
 
 .nav-and-logo-container {
     display: flex;
+    background-color: $theme-purple-1;
 }
 
 @media (min-width: 770px) {
