@@ -16,9 +16,9 @@ function SplashScreen() {
 
 // Higher Order Component that will render the component passed to it after rendering
 // the splashscreen for x seconds. Can be changed to wait for something to load.
-function withSplashScreen(WrappedComponent) {
-  return class extends Component {
-    constructor(props) {
+function withSplashScreen<Props>(WrappedComponent: React.ComponentType<Props>) {
+  return class extends Component<Props, {loading: boolean}> {
+    constructor(props: Props) {
       super(props);
       this.state = {
         loading: true,
