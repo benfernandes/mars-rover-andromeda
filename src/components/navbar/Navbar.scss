@@ -2,7 +2,7 @@ $theme-purple-1: #402343;
 $theme-purple-2: #644679;
 $theme-green-1: #1FAC29;
 
-.navbar {
+.mobile-navbar {
     padding: 5px;
     background-color: $theme-purple-1;
     position: fixed;
@@ -19,6 +19,10 @@ $theme-green-1: #1FAC29;
     opacity: 0.8;
 }
 
+.desktop-navbar {
+    display: none;
+}
+
 .open {
     opacity: 1;
     .nav-list li {
@@ -29,6 +33,7 @@ $theme-green-1: #1FAC29;
 .closed .nav-list li {
     height: 0;
     opacity: 0;
+    // pointer-events: none;
 }
 
 .planet-icon {
@@ -72,5 +77,27 @@ $theme-green-1: #1FAC29;
 }
 
 @media (min-width: 770px) {
-    
+    .mobile-navbar {
+        display: none;
+    }
+
+    .desktop-navbar {
+        display: flex;
+        background-color: $theme-purple-1;
+    }
+/*
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        li {
+            margin: 8px 10px;
+            max-width: 204px;
+            width: auto;
+            a {
+                padding: 5px 25px;
+            }
+        }
+    }*/
 }
