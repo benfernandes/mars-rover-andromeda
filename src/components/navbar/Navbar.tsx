@@ -44,7 +44,7 @@ function Navbar() {
         <div>
             <nav className={`mobile-navbar ${navbarOpen ? "open" : "closed"}`}>
                 <button className="nav-button hamburger-button" onClick={toggleNavbar}>
-                    <GoThreeBars color="white" />
+                    <GoThreeBars color="white" size="22"/>
                 </button>
                 <Links onClick={toggleNavbar}/>
             </nav>
