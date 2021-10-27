@@ -1,0 +1,129 @@
+.PhotoOfTheDay {
+  width: 70%;
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  padding: 5%;
+}
+
+.DailyImage {
+  //width: 50%;
+  z-index: 1;
+  border: none;
+  filter: brightness(.4);
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+[class*="DailyImage"] {
+  width: 80%;
+}
+
+@media only screen and (min-width: 768px){
+  .DailyImage {width: 50%}
+}
+
+.MetadataSection {
+  position: absolute;
+  background-color: black;
+  color: white;
+  opacity: 0.5;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+
+}
+
+.ImageTitle {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+[class*="ImageTitle"] {
+  font-size: medium;
+}
+
+
+@media only screen and (min-width: 280px){
+  .ImageTitle {font-size: x-small}
+}
+
+@media only screen and (min-width: 320px){
+  .ImageTitle {font-size: small}
+}
+
+@media only screen and (min-width: 411px){
+  .ImageTitle {font-size: medium}
+}
+
+
+
+.ImageSection {
+  position: relative;
+  margin: 10px;
+}
+
+.ExplanationText{
+  color: darkgrey;
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+[class*="ExplanationText"] {
+  font-size: medium;
+}
+
+@media only screen and (min-width: 280px){
+  .ExplanationText {font-size: xx-small}
+}
+
+@media only screen and (min-width: 320px){
+  .ExplanationText {font-size: x-small}
+}
+
+@media only screen and (min-width: 411px){
+  .ExplanationText {font-size: small}
+}

@@ -1,12 +1,17 @@
 import {useEffect, useState } from "react";
-import {GetDataMainPhoto, iPotdData, iPotdVideoData } from "../../api/POTD-API/Potd-api";
+import {GetDataMainPhoto, iPotdData, iPotdVideoData } from "../../api/POTD-API/Potd";
+import './Potd.scss';
+// import VideoThumbnail from 'react-video-thumbnail';
 
 export function PhotoOrVideo(videoPotd:iPotdVideoData){
     if (videoPotd.media_type == "video"){
+
+
         return(
             <iframe
-                className="DailyImage" src={videoPotd.url}>
+                className="DailyImage" src={videoPotd.url+(videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
             </iframe>
+
         )
     }
 
@@ -35,22 +40,21 @@ export function DailyPhoto(){
         )
     }
 
-
     return (
         <div className="PhotoOfTheDay">
+
             <section className="ImageSection">
                 <PhotoOrVideo media_type={dataPotd.media_type} url={dataPotd.url} />
-            </section>
-
-            <section className="MetadataSection">
-                <div>{dataPotd.copyright}</div>
-                <div>{dataPotd.title}</div>
-                <div>{dataPotd.date}</div>
+                <section className="MetadataSection">
+                    <div className={"ImageTitle"}>{dataPotd.title}</div>
+                </section>
             </section>
 
             <section className="ExplanationSection">
-                <div>{dataPotd.explanation}</div>
+                <div className="ExplanationText">{dataPotd.explanation}</div>
             </section>
+
+
 
         </div>
     );
