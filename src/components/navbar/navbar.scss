@@ -16,13 +16,14 @@ $theme-green-1: #1FAC29;
     border-top: none;
     border-right: none;
     transition: opacity 0.2s;
-    .translucent {
-        opacity: 0.8;
-    }
+    opacity: 0.8;
 }
 
-.open .nav-list li {
-    width: 204px;
+.open {
+    opacity: 1;
+    .nav-list li {
+        width: 204px;
+    }
 }
 
 .closed .nav-list li {
@@ -70,8 +71,6 @@ $theme-green-1: #1FAC29;
     }
 }
 
-@media (min-width: 500px) {
-    .nav-list {
-        flex-direction: row;
-    }
+@media (min-width: 770px) {
+    
 }
