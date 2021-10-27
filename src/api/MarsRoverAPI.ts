@@ -11,7 +11,8 @@ async function GetImagesByQuantity(quantity: number) {
     // const ApiContext = useContext(ApiCtx);
     const apiKey = 't7bN4gPSJzbQidlv33BJnyY2IT8dD3d0KuDztdWz';
     let startSol = quantity * 1.2; // we are giving the API more days than pictures we're looking for to make sure we return enough.
-    let apiCall: string = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?sol=${startSol}&api_key=${apiKey}`;
+    let apiCall: string = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?sol=${startSol}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
+
     let resultsArray : string[] = new Array(quantity).fill('');
     let toJson;
     let arrayLength = 0;
