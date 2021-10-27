@@ -11,7 +11,7 @@ import Navbar from './components/navbar/navbar';
 import Home from './views/Home';
 import withSplashScreen from './components/splashScreen/withSplashScreen';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Router>
