@@ -1,0 +1,64 @@
+.splash-screen-wrapper { 
+    width: 100vw;
+    height: 100vh;
+    background-color: #723F78;
+    color: #FBFAF8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-screen {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    animation-name: slideout;
+    animation-duration: 5s;
+    animation-delay: 9s;
+    animation-iteration-count: 1;
+}
+
+.earthSplash {
+    margin: 15% 0;
+    animation-name: rotation;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.topText {
+    opacity: 0;
+    animation: fadeIn linear 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.bottomText {
+    opacity: 0;
+    animation: fadeIn linear 3s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideout {
+    5% {color: #723F78;}  // clear text
+
+    100% {
+        margin-right: 80vw;
+        margin-bottom: 50vh;
+        color: #723F78;
+    }
+  }
+  
+@keyframes rotation {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(180deg)}
+    100% {transform: rotate(359deg) scale(0.1)}
+}
+
+@keyframes fadeIn {
+    0% {opacity:0}
+    100% {opacity:1;}
+}

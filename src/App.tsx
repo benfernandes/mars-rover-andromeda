@@ -6,8 +6,10 @@ import {
   Link
 } from "react-router-dom";
 import './App.scss';
+import './views/Home.scss'
 import Navbar from './components/navbar/navbar';
 import Home from './views/Home';
+import withSplashScreen from './components/splashScreen/withSplashScreen';
 
 function App() {
   return (
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default withSplashScreen(App);
