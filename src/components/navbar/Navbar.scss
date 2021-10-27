@@ -99,8 +99,12 @@ $theme-green-1: #1FAC29;
 //TODO Review
 .open {
     opacity: 1;
+    .nav-list {
+        margin-bottom: 14px;
+    }
     .nav-list li {
         width: 204px;
+        margin: 12px;
     }
 }
 
@@ -125,6 +129,7 @@ $theme-green-1: #1FAC29;
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
+        margin-bottom: 12px;
         li {
             margin: 8px 10px;
             max-width: 204px;
