@@ -25,8 +25,12 @@ $theme-green-1: #1FAC29;
 
 .open {
     opacity: 1;
+    .nav-list {
+        margin-bottom: 14px;
+    }
     .nav-list li {
         width: 204px;
+        margin: 12px;
     }
 }
 
@@ -34,17 +38,18 @@ $theme-green-1: #1FAC29;
     height: 0;
     opacity: 0;
     pointer-events: none;
+    margin: 0;
 }
 
 .planet-icon {
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .nav-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 32px;
+    height: 44px;
     color: white;
     border: 2px solid white;
     border-radius: 6px;
@@ -55,7 +60,7 @@ $theme-green-1: #1FAC29;
 }
 
 .hamburger-button {
-    width: 32px;
+    width: 44px;
     background-color: $theme-purple-2;
 }
 
@@ -70,6 +75,7 @@ $theme-green-1: #1FAC29;
         transition: all 0.5s;
         height: 36px;
         width: 36px;
+        margin: 8px 4px;
         a {
             width: calc(100% - 4px);
         }
@@ -91,6 +97,7 @@ $theme-green-1: #1FAC29;
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
+        margin-bottom: 12px;
         li {
             margin: 8px 10px;
             max-width: 204px;
