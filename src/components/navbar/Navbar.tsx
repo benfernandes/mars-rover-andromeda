@@ -7,7 +7,6 @@ function Navbar() {
     const [navbarOpen, setNavBarOpen] = useState(false);
 
     function toggleNavbar() {
-        console.log("toggle");
         setNavBarOpen(current => !current);
     }  
 
