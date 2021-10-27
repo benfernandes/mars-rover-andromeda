@@ -33,7 +33,7 @@ $theme-green-1: #1FAC29;
 .closed .nav-list li {
     height: 0;
     opacity: 0;
-    // pointer-events: none;
+    pointer-events: none;
 }
 
 .planet-icon {
@@ -85,7 +85,7 @@ $theme-green-1: #1FAC29;
         display: flex;
         background-color: $theme-purple-1;
     }
-/*
+
     .nav-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -99,5 +99,5 @@ $theme-green-1: #1FAC29;
                 padding: 5px 25px;
             }
         }
-    }*/
+    }
 }

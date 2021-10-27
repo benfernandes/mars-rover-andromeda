@@ -30,46 +30,6 @@ function Navbar() {
                         <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1556252/planet-mars-clipart-xl.png" width="25" alt="mars" />
                     </Link>
                 </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/earth">
-                        Earth
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/59788/earth-planet-clipart-md.png" width="25" alt="earth" />
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/mars">
-                        Mars
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1556252/planet-mars-clipart-xl.png" width="25" alt="mars" />
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/earth">
-                        Earth
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/59788/earth-planet-clipart-md.png" width="25" alt="earth" />
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/mars">
-                        Mars
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1556252/planet-mars-clipart-xl.png" width="25" alt="mars" />
-                    </Link>
-                </li>
-                <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/earth">
-                        Earth
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/59788/earth-planet-clipart-md.png" width="25" alt="earth" />
-                    </Link>
-                </li>
             </ul>
         );
     }
