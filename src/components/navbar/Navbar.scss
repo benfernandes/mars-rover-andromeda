@@ -83,14 +83,19 @@ $theme-green-1: #1FAC29;
     }
 }
 
+.nav-and-logo-container {
+    display: flex;
+}
+
 @media (min-width: 770px) {
     .mobile-navbar {
         display: none;
     }
 
     .desktop-navbar {
-        display: flex;
+        display: inline-flex;
         background-color: $theme-purple-1;
+        width: 100%;
     }
 
     .nav-list {

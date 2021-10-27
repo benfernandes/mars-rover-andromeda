@@ -40,7 +40,8 @@ function Navbar() {
     }
 
     return (
-        <div>
+        <div className="nav-and-logo-container">
+            <img src="https://png.pngitem.com/pimgs/s/388-3882910_graphics-hd-png-download.png" alt="Bendromeda logo" height="64"/>
             <nav className={`mobile-navbar ${navbarOpen ? "open" : "closed"}`}>
                 <button className="nav-button hamburger-button" onClick={toggleNavbar}>
                     <GoThreeBars color="white" size="22"/>
