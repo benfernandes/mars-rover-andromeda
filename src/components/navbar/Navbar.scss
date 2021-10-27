@@ -23,12 +23,19 @@ $theme-green-1: #1FAC29;
     opacity: 1;
     .nav-list li {
         width: 204px;
+        margin: 12px;
+        font-size: 18px;
     }
 }
 
 .closed .nav-list li {
     height: 0;
     opacity: 0;
+    pointer-events: none;
+}
+
+.closed .nav-list {
+    margin: 0;
 }
 
 .planet-icon {
@@ -39,7 +46,7 @@ $theme-green-1: #1FAC29;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 32px;
+    height: 44px;
     color: white;
     border: 2px solid white;
     border-radius: 6px;
@@ -50,7 +57,7 @@ $theme-green-1: #1FAC29;
 }
 
 .hamburger-button {
-    width: 32px;
+    width: 44px;
     background-color: $theme-purple-2;
 }
 
@@ -60,6 +67,7 @@ $theme-green-1: #1FAC29;
     margin: 0;
     display: flex;
     flex-direction: column;
+    margin-bottom: 14px;
     
     li {
         transition: all 0.5s;

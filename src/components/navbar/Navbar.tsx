@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <nav className={`navbar ${navbarOpen ? "open" : "closed"}`}>
             <button className="nav-button hamburger-button" onClick={toggleNavbar}>
-                <GoThreeBars color="white" />
+                <GoThreeBars color="white" size="22"/>
             </button>
             <ul className="nav-list" >
                 <li>
