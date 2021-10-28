@@ -1,153 +1,104 @@
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
+.PhotoGalleryContainer {
+  background-color: rgba(0, 0, 0, 0.92);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-.ArrowBase {
+  .ArrowBase {
     font-size: 3rem;
     font-weight: bold;
     justify-content: center;
     cursor: pointer;
     transition-duration: 0.5s;
     color: white;
-}
+    z-index: 2;
 
+    &.LeftArrow {
+      float: left;
 
-.PhotoGalleryContainer {
-    background-color: rgba(0, 0, 0, 0.92);
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
+      &:active {
+        transform: translate(-0.5em, 0);
+      }
+    }
 
-.ImageComponentContainer {
+    &.RightArrow {
+      float: right;
+
+      &:active {
+        transform: translate(0.5em, 0);
+      }
+    }
+  }
+
+  .ImageComponentContainer {
     display: flex;
     width: 80%;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-}
 
-@media screen and (min-width: 800px) {
-    .PhotoGalleryContainer {
-        background-color: rgba(0, 0, 0, 0.92);
-        text-align: center;
-        height: 70%;
-        width: 100%;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+    .PhotoGalleryHeroImage {
+      width: 100%;
+      object-fit: contain;
+      transition-duration: 0.2s;
+
+      &.FadeOutImage {
+        opacity: 0;
+      }
+
+      &.FadeInImage {
+        opacity: 1;
+      }
     }
 
-    .ImageComponentContainer {
-        display: flex;
-        height: 85vh;
-        width: 80%;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.PhotoGalleryHeroImage {
-    width: 100vw;
-    object-fit: contain;
-}
-
-@media screen and (min-width: 800px) {
-.PhotoGalleryHeroImage {
-    width: 100vw;
-    height: 70vh;
-    object-fit: contain;
-}
-}
-
-.PhotoGalleryThumbnailsContainer {
-    display: none;
-}
-
-@media screen and (min-width: 800px) {
     .PhotoGalleryThumbnailsContainer {
-        display: flex;
-        height: 100px;
-        width: 100vw;
-        justify-content: left;
-        align-items: center;
-        overflow-x: scroll;
-        overflow-y: hidden;
+      display: flex;
+      height: 100px;
+      width: 100%;
+      justify-content: left;
+      align-items: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      @media screen and (max-width: 800px) {
+        & {
+          display: none;
+        }
+      }
+
+      .PhotoGalleryThumbnailContainer {
+        height: 100%;
+
+        .PhotoGalleryThumbnail {
+          height: 100%;
+          object-fit: cover;
+          border: 0.5px solid #cbcbcb;
+
+          &:not(.SelectedImage) {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      &::-webkit-scrollbar {
+        height: 5px;
+
+        &-track {
+          background: #f1f1f1;
+        }
+
+        &-thumb {
+          background: #888;
+
+          &:hover {
+            background: #555;
+          }
+        }
+      }
     }
+  }
 }
 
 
-.PhotoGalleryThumbnailContainer {
-    margin-top: 6px;
-    height: 100px;
-}
-
-.PhotoGalleryThumbnail {
-height: 100%;
-    object-fit: cover;
-    border: 2px solid #cbcbcb;
-}
-
-.SelectedImage {
-}
-
-.LeftArrow {
-    float: left;
-    z-index: 2;
-}
-
-.LeftArrow:active {
-    transform: translate(-0.5em,0);
-}
-
-.RightArrow {
-    float: right;
-    z-index: 2;
-
-}
-
-.RightArrow:active {
-    transform: translate(0.5em,0);
-}
-
-.LeftArrow::selection {
-    color: white;
-    background: none;
-}
-
-.RightArrow::selection {
-    color: white;
-    background: none;
-}
-
-.FadeOutImage {
-    transition-duration: 0.2s;
-    opacity: 0;
-}
-
-FadeInImage {
-    transition-duration: 0.2s;
-    opacity: 1;
-}

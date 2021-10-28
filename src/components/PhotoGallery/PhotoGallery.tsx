@@ -1,31 +1,34 @@
-import react, {useState} from 'react';
-import {IPhotoGalleryProps, IPhotoGalleryBottomProps} from './PhotoGallery.interface';
+import React, {useState} from 'react';
+import './PhotoGallery.scss';
+
+interface IPhotoGalleryProps {
+    images: string[]
+}
+
+interface IPhotoGalleryBottomProps {
+    images: string[]
+    selectedImage: number
+    selectImage: (index: number) => void
+    cssClass?: string
+}
 
 export default function PhotoGallery(props: IPhotoGalleryProps) {
-    const [photoIndex, photoIndexSet] = useState(0);
-    const [heroImageClass, heroImageClassSet] = useState("PhotoGalleryHeroImage")
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [heroImageClass, setHeroImageClass] = useState("PhotoGalleryHeroImage")
 
     function IncrementPhotoIndex(index: number) {
-        // fade out image
-        heroImageClassSet("PhotoGalleryHeroImage FadeOutImage")
+        setHeroImageClass("PhotoGalleryHeroImage FadeOutImage")
         setTimeout(() => {
-            if (photoIndex + index >= props.images.length) {
-                photoIndexSet(0)
-            } else if (photoIndex + index < 0) {
-                photoIndexSet(props.images.length - 1)
-            } else {
-                photoIndexSet(prevState => prevState + index);
-
-            }
-            heroImageClassSet("PhotoGalleryHeroImage FadeInImage")
+            setPhotoIndex(prevState => (prevState + index) % props.images.length);
+            setHeroImageClass("PhotoGalleryHeroImage FadeInImage")
         }, 400)
     }
 
     function SetPhotoIndex(index: number) {
-        heroImageClassSet("PhotoGalleryHeroImage FadeOutImage")
+        setHeroImageClass("PhotoGalleryHeroImage FadeOutImage")
         setTimeout(() => {
-            photoIndexSet(index)
-            heroImageClassSet("PhotoGalleryHeroImage FadeInImage")
+            setPhotoIndex(index)
+            setHeroImageClass("PhotoGalleryHeroImage FadeInImage")
         }, 400);
     }
 
@@ -33,9 +36,11 @@ export default function PhotoGallery(props: IPhotoGalleryProps) {
         <div className="PhotoGalleryContainer">
             {props.images.length > 0 ?
                 <>
-                    <span className="ArrowBase LeftArrow" onMouseDown={() => IncrementPhotoIndex(-1)}> &lt;</span>
-                    <ImageComponent cssClass={heroImageClass} images={props.images} selectedImage={photoIndex}
-                                selectImage={(index: number) => SetPhotoIndex(index)}/>
+                    <span className="ArrowBase LeftArrow" onMouseDown={() => IncrementPhotoIndex(-1)}>&lt;</span>
+                    <ImageComponent cssClass={heroImageClass}
+                                    images={props.images}
+                                    selectedImage={photoIndex}
+                                    selectImage={(index: number) => SetPhotoIndex(index)}/>
                     <span className="ArrowBase RightArrow" onMouseDown={() => IncrementPhotoIndex(1)}>&gt;</span>
                 </> :
                 <p>Loading</p>
@@ -46,19 +51,21 @@ export default function PhotoGallery(props: IPhotoGalleryProps) {
 
 function ImageComponent(props: IPhotoGalleryBottomProps) {
     return <div className="ImageComponentContainer">
-        <img className={props.cssClass} src={props.images[props.selectedImage]}/>
+        <img alt="" className={props.cssClass} src={props.images[props.selectedImage]}/>
         <Thumbnails images={props.images} selectedImage={props.selectedImage}
                     selectImage={(index) => props.selectImage(index)}/>
     </div>
 }
 
 function Thumbnails(props: IPhotoGalleryBottomProps) {
-    return <div className="PhotoGalleryThumbnailsContainer ">
-        {props.images.map((image, index) => (
-            <div className="PhotoGalleryThumbnailContainer" onMouseDown={() => props.selectImage(index)}>
-                <img src={image} className={index == props.selectedImage ? "SelectedImage PhotoGalleryThumbnail" : "PhotoGalleryThumbnail"}/>
-            </div>
-        ))
+    return <div className="PhotoGalleryThumbnailsContainer">
+        {
+            props.images.map((image, index) => (
+                <div className="PhotoGalleryThumbnailContainer" onMouseDown={() => props.selectImage(index)}>
+                    <img alt="" src={image}
+                         className={`PhotoGalleryThumbnail ${index === props.selectedImage ? "SelectedImage" : ""}`}/>
+                </div>
+            ))
         }
     </div>
 }
