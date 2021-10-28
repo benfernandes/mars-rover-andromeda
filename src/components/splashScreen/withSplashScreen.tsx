@@ -30,7 +30,7 @@ function withSplashScreen<Props>(WrappedComponent: React.ComponentType<Props>) {
         this.setState({
           loading: false,
         });
-      }, 14000)
+      }, 8000)
     }
 
     render() {
