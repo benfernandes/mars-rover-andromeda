@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    ul {
+        list-style: none;
+    }
+    .burger-button {
+        background-color: black;
+        color: white;
+        width: 4rem;
+    }
+}
