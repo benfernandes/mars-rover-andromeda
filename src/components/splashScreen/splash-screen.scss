@@ -49,8 +49,7 @@
     5% {color: #723F78;}  // clear text
 
     100% {
-        margin-right: 80vw;
-        margin-bottom: 50vh;
+        margin-bottom: 65vh;
         color: #723F78;
     }
   }
@@ -58,7 +57,7 @@
 @keyframes rotation {
     0% {transform: rotate(0deg)}
     50% {transform: rotate(180deg)}
-    100% {transform: rotate(359deg) scale(0.1)}
+    100% {transform: rotate(359deg) scale(0.15)}
 }
 
 @keyframes fadeIn {
