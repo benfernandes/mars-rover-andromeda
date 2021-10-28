@@ -14,7 +14,7 @@ function Navbar() {
             <button className={"burger-button"} onClick={toggleNavbar}>{navbarOpen ? "Close" : "Open"}</button>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/home">Home</Link>
                 </li>
                 <li>
                     <Link to="/earth">Earth</Link>
