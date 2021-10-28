@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.nav-and-logo-container {  // for future navbar
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.home-page {
+    color: #FBFAF8;
+    font-family: 'Press Start 2P', cursive;
+}
+
+section {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+}
+
+.first-section {
+    background-color: #723F78;
+}
+
+.last-section {
+    background-color: #FC7536;
+}
+
+.section-title {
+    padding-top: 125px;
+    font-size: 1.5rem;
+}
+
+.section-subtitle {
+    margin-top: 15px;
+    font-size: 0.75rem;
+}
+
+.scroll-down-wrapper {
+    margin-bottom: 15px;
+    color: #FC7536;
+}
