@@ -9,7 +9,7 @@ export function SelectEarthInvestmentArea() {
     const [date, setDate] = useState("2018-01-01");
     const [fullURL, setFullUrl] = useState(`${baseURL}?lon=${lon}&lat=${lat}&date=${date}&dim=0.15&api_key=HA5G94lZD32prK0gefXbvjYa8Vq9319MbB5NFcBY`);
 
-    useEffect(()=>{
+    useEffect(() => {
         setFullUrl(`${baseURL}?lon=${lon}&lat=${lat}&date=${date}&dim=0.15&api_key=HA5G94lZD32prK0gefXbvjYa8Vq9319MbB5NFcBY`);
 
     }, [lon, lat, date])
@@ -32,19 +32,20 @@ export function SelectEarthInvestmentArea() {
 
 
     return (
-        <div>
-            <img src={fullURL}></img>
-            <form>
-                <label>Enter Latitude</label>
-                <input type={"text"} value={lon} onInput={handleChangeLon}/>
-
-                <label>Enter Longitude</label>
-                <input type={"text"} value={lat} onChange={handleChangeLat}/>
-
-                <label>Enter Date</label>
-                <input type={"date"} value={date} onChange={handleChangeDate}/>
-                
-            </form>
+        <div className="earthContainer">
+            <img src={fullURL} className="earthimage prettyBoxShadow" onError={(e) => {setFullUrl("https://media.istockphoto.com/vectors/space-exploration-background-design-modern-gradient-vector-template-vector-id1178088975?b=1&k=20&m=1178088975&s=170667a&w=0&h=bkUTh-FJixPpdROIlpj4k-7838MAeSMLinnWj8Rc5ys=")}}></img>
+            <div>
+                <label className="earthlabel">Enter Latitude</label>
+                <input className="EarthInvestmentInput" type={"text"} value={lon} onInput={handleChangeLon}/>
+            </div>
+            <div>
+                <label className="earthlabel">Enter Longitude</label>
+                <input className="EarthInvestmentInput" type={"text"} value={lat} onChange={handleChangeLat}/>
+            </div>
+            <div>
+                <label className="earthlabel">Enter Date</label>
+                <input className="EarthInvestmentInput" type={"date"} value={date} onChange={handleChangeDate}/>
+            </div>
         </div>
 
 
