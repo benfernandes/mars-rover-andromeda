@@ -17,20 +17,20 @@ function Navbar() {
             </button>
             <ul className="nav-list" >
                 <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/">
+                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/">
                         Home
                     </Link>
                 </li>
                 <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/earth">
+                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/earth">
                         Earth
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/59788/earth-planet-clipart-md.png" width="25" alt="earth" />
+                        <img className="planet-icon" src="images/earth.png" alt="earth" />
                     </Link>
                 </li>
                 <li>
-                    <Link className="nav-button" onClick={toggleNavbar} to="/mars">
+                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/mars">
                         Mars
-                        <img className="planet-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/1556252/planet-mars-clipart-xl.png" width="25" alt="mars" />
+                        <img className="planet-icon" src="images/mars.png" alt="mars" />
                     </Link>
                 </li>
             </ul>
