@@ -17,28 +17,29 @@ $theme-green-1: #1FAC29;
     border-right: none;
     transition: opacity 0.2s;
     opacity: 0.8;
+    & > * {
+        margin-bottom: 50px;
+    }
 }
 
 .open {
     opacity: 1;
     .nav-list {
-        width: 204px;
+        visibility: visible;
+        width: 200px;
         li {
-            width: 90%;
-            margin: 0.7em;
+            width: 100%;
             font-size: 18px;
         }
     }
 }
 
-.closed .nav-list li {
-    height: 0;
-    pointer-events: none;
-}
-
 .closed .nav-list {
     margin: 0;
+    width: 0;
+    visibility: hidden;
     opacity: 0;
+    height: 0;
 }
 
 .planet-icon {
@@ -70,14 +71,20 @@ $theme-green-1: #1FAC29;
     margin: 0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5em;
+    transition: visibility 0.5s, opacity 0.5s;
+
+    & > * {
+        margin-bottom: 1em;
+    }
     
-    li {
-        transition: all 0.5s;
+    :last-child {
+        margin-bottom: 0;
+    }
+    /*li {
         height: 36px;
         width: 36px;
         a {
             width: calc(100% - 4px);
         }
-    }
+    }*/
 }
