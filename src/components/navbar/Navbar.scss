@@ -87,6 +87,10 @@ $theme-green-1: #1FAC29;
         background-color: transparent;
         text-decoration: none;
         white-space: nowrap;
+        &:hover {
+            border: 2px solid $theme-green-1;
+            background-color: $theme-purple-2;
+        }
     }
 }
 
@@ -144,6 +148,7 @@ $theme-green-1: #1FAC29;
         justify-content: center;
         margin-bottom: 12px;
         li {
+            transition: all 0.5s;
             margin: 8px 10px;
             max-width: 204px;
             width: auto;
