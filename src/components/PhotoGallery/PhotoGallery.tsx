@@ -33,10 +33,10 @@ export default function PhotoGallery(props: IPhotoGalleryProps) {
         <div className="PhotoGalleryContainer">
             {props.images.length > 0 ?
                 <>
-                <span className="ArrowBase LeftArrow" onMouseDown={() => IncrementPhotoIndex(-1)}> &lt;</span>
-                <ImageComponent cssClass={heroImageClass} images={props.images} selectedImage={photoIndex}
+                    <span className="ArrowBase LeftArrow" onMouseDown={() => IncrementPhotoIndex(-1)}> &lt;</span>
+                    <ImageComponent cssClass={heroImageClass} images={props.images} selectedImage={photoIndex}
                                 selectImage={(index: number) => SetPhotoIndex(index)}/>
-                <span className="ArrowBase RightArrow" onMouseDown={() => IncrementPhotoIndex(1)}>&gt;</span>
+                    <span className="ArrowBase RightArrow" onMouseDown={() => IncrementPhotoIndex(1)}>&gt;</span>
                 </> :
                 <p>Loading</p>
             }
@@ -56,7 +56,7 @@ function Thumbnails(props: IPhotoGalleryBottomProps) {
     return <div className="PhotoGalleryThumbnailsContainer ">
         {props.images.map((image, index) => (
             <div className="PhotoGalleryThumbnailContainer" onMouseDown={() => props.selectImage(index)}>
-                <img src={image} className="PhotoGalleryThumbnail"/>
+                <img src={image} className={index == props.selectedImage ? "SelectedImage PhotoGalleryThumbnail" : "PhotoGalleryThumbnail"}/>
             </div>
         ))
         }

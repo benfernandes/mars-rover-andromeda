@@ -28,10 +28,10 @@
     color: white;
 }
 
-.PhotoGalleryContainer{
+
+.PhotoGalleryContainer {
     background-color: rgba(0, 0, 0, 0.92);
     text-align: center;
-    height: 70%;
     width: 100%;
     position: absolute;
     display: flex;
@@ -41,28 +41,63 @@
 
 .ImageComponentContainer {
     display: flex;
-    height: 85vh;
     width: 80%;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
 }
 
+@media screen and (min-width: 800px) {
+    .PhotoGalleryContainer {
+        background-color: rgba(0, 0, 0, 0.92);
+        text-align: center;
+        height: 70%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .ImageComponentContainer {
+        display: flex;
+        height: 85vh;
+        width: 80%;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .PhotoGalleryHeroImage {
-    width: 80vw;
-    height: 70vh;
+    width: 100vw;
     object-fit: contain;
 }
 
-.PhotoGalleryThumbnailsContainer {
-    display: flex;
-    height: 100px;
+@media screen and (min-width: 800px) {
+.PhotoGalleryHeroImage {
     width: 100vw;
-    justify-content: center;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    height: 70vh;
+    object-fit: contain;
 }
+}
+
+.PhotoGalleryThumbnailsContainer {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .PhotoGalleryThumbnailsContainer {
+        display: flex;
+        height: 100px;
+        width: 100vw;
+        justify-content: left;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
 
 .PhotoGalleryThumbnailContainer {
     margin-top: 6px;
@@ -71,13 +106,16 @@
 
 .PhotoGalleryThumbnail {
 height: 100%;
-    aspect-ratio: 1/1;
     object-fit: cover;
     border: 2px solid #cbcbcb;
 }
 
+.SelectedImage {
+}
+
 .LeftArrow {
     float: left;
+    z-index: 2;
 }
 
 .LeftArrow:active {
@@ -86,6 +124,8 @@ height: 100%;
 
 .RightArrow {
     float: right;
+    z-index: 2;
+
 }
 
 .RightArrow:active {
