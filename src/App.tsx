@@ -1,36 +1,31 @@
-import React from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
+  BrowserRouter as Router,
+  Switch,
+  Route,
 } from "react-router-dom";
 import './App.scss';
-import Navbar from './components/navbar/navbar';
+import Navbar from "./components/navbar/Navbar";
 import Home from './views/Home';
-import './App.scss';
-
 
 function App() {
-
-    return (
-        <div className="App">
-            <Router>
-                <Navbar/>
-                <Switch>
-                    <Route path="/earth">
-                        <p>Earth</p>
-                    </Route>
-                    <Route path="/mars">
-                        <p>Mars</p>
-                    </Route>
-                    <Route path="/">
-                        <Home/>
-                    </Route>
-                </Switch>
-            </Router>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/earth">
+            <p>Earth</p>
+          </Route>
+          <Route path="/mars">
+            <p>Mars</p>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
