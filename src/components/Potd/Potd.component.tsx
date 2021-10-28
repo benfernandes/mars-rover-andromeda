@@ -1,5 +1,5 @@
 import {useEffect, useState } from "react";
-import {GetDataMainPhoto, iPotdData, iPotdVideoData } from "../../api/POTD-API/Potd";
+import {GetDataMainPhoto, iPotdData, iPotdVideoData } from "../../api/Potd";
 import './Potd.scss';
 // import VideoThumbnail from 'react-video-thumbnail';
 
