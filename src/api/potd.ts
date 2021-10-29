@@ -1,5 +1,6 @@
 import axios, {AxiosResponse} from 'axios';
 
+
 export interface iPotdData {
     copyright: string;
     date: Date;
@@ -20,7 +21,7 @@ const defaultObject: iPotdData = {
     explanation: "This is mars!",
     media_type: "image",
     title: "Mars!",
-    url: "api/mars.jpg"
+    url: "../api/mars.jpg"
 }
 
 export const GetDataMainPhoto =  async () => {
