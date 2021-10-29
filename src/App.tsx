@@ -19,7 +19,7 @@ const App = () => {
         <Switch>
           <Route exact path="/earth" component={Earth}/>
           <Route exact path="/mars" component={Mars}/>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" component={withSplashScreen(Home)}/>
           <Route component={NotFound}/>
         </Switch>
       </Router>
@@ -27,4 +27,4 @@ const App = () => {
   );
 }
 
-export default withSplashScreen(App);
+export default App;
