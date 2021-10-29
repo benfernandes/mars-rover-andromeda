@@ -29,7 +29,7 @@ export function DailyPhoto() {
         })
     }, []);
 
-    if (dataPotd == null) {
+    if (dataPotd === null) {
         return (
             <div>Data Loading</div>
         )
