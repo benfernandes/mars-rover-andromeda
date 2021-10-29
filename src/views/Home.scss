@@ -33,8 +33,24 @@ section {
 }
 
 .section-title {
-    padding-top: 125px;
+    padding-top: 110px;
     font-size: 1.5rem;
+}
+
+.earth-icon {
+    position: absolute;
+    left: calc(50vw - 113px);
+    top: calc(50vh - 113px);
+
+    animation-name: rotatingicon;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatingicon {
+    0% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.2) rotate(0deg)}
+    100% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.2) rotate(359deg)}
 }
 
 .section-subtitle {
