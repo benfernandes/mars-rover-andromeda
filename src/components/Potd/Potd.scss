@@ -4,6 +4,11 @@
   margin: auto;
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   padding: 30px;
+
+  height: 50vh;
+  width: 90vw;
+  overflow-y: scroll;
+  border-radius: 10px;
 }
 
 .daily-image {

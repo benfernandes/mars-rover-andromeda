@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import scrollDown from "../images/scrolldown.png"
 import earthImg from "../images/earth.png"
 import marsImg from "../images/mars.png"
+import { DailyPhoto } from "../components/Potd/Potd";
 import "./Home.scss"
 
 
@@ -13,7 +14,7 @@ function Home() {
                     EXPLORE
                     <div className="section-subtitle">THE KNOWN UNIVERSE</div>
                 </div>
-                {/* <PhotoOfTheDay /> */}
+                <DailyPhoto />
                 <div className="scroll-down-wrapper">
                     <img src={scrollDown} className="scroll-down"/>
                 </div>
