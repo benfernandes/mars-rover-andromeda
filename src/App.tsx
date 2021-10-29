@@ -6,6 +6,9 @@ import {
 import './App.scss';
 import Navbar from "./components/navbar/Navbar";
 import Home from './views/Home';
+import Earth from "./views/Earth";
+import Mars from "./views/Mars";
+import NotFound from "./views/NotFound";
 
 function App() {
   return (
@@ -13,15 +16,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/earth">
-            <p>Earth</p>
-          </Route>
-          <Route path="/mars">
-            <p>Mars</p>
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route exact path="/earth" component={Earth}/>
+          <Route exact path="/mars" component={Mars}/>
+          <Route exact path="/" component={Home}/>
+          <Route component={NotFound}/>
         </Switch>
       </Router>
     </div>
