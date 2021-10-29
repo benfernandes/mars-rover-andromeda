@@ -44,6 +44,6 @@ function getApiCall(backdatedDays : number) {
     let yyyy = today.getFullYear();
     let apiDate = `${yyyy}-${mm}-${dd}`;
 
-    let result = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?earth_date=${apiDate}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
+    let result = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?earth_date=${apiDate}&api_key=t7bN4gPSJzbQidlv33BJnyY2IT8dD3d0KuDztdWz`;
     return result;
 }
