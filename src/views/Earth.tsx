@@ -5,10 +5,10 @@ function Earth() {
     return (
         <main className="home-page">
             <section className="first-section">
-                <div className="section-title">
+                <h3 className="section-title">
                     EARTH
-                    <div className="section-subtitle">VIEW PHOTOS OF EARTH</div>
-                </div>
+                    <p className="section-subtitle">VIEW PHOTOS OF EARTH</p>
+                </h3>
                 <SelectEarthInvestmentArea/>
             </section>
         </main>
