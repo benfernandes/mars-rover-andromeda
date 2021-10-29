@@ -9,10 +9,11 @@ export function PhotoOrVideo(videoPotd: iPotdVideoData) {
                 className="DailyImage" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
             </video>
         )
+    } else {
+        return (
+            <img className="DailyImage" src={videoPotd.url}></img>
+        )
     }
-    return (
-        <img className="DailyImage" src={videoPotd.url}></img>
-    )
 }
 
 export function DailyPhoto() {
