@@ -15,6 +15,9 @@ nav {
 .home-page {
     color: #FBFAF8;
     font-family: 'Press Start 2P', cursive;
+    line-height: 20px;
+    font-size: 1rem;
+    overflow: hidden;
 }
 
 section {
@@ -38,7 +41,7 @@ section {
 
 .section-title {
     padding-top: 110px;
-    font-size: 1.5rem;
+    font-size: 125%;
     animation: fadein 2s;
 }
 
@@ -75,9 +78,8 @@ section {
 
 .section-subtitle {
     margin-top: 15px;
-    font-size: 0.75rem;
+    font-size: 75%;
     animation: fadein 2s;
-    line-height: 20px;
 }
 
 .scroll-down-wrapper {
@@ -92,8 +94,9 @@ section {
 }
 
 .mars-icon {
-    margin: 3rem 0;
-    width: 60vw;
+    margin: 2rem 0;
+    max-height: 40vh;
+    height: 70vw;
     animation: rotation 25s infinite linear;
 }
 
@@ -109,7 +112,8 @@ $shadow-color:  #204046;
 
 .eightbit-btn {
     animation: fadein 2s;
-    width: 100%;
+    width: 90%;
+    margin: 15px 50px 0;
 
     background: $button-background;
     position: relative;
@@ -149,5 +153,33 @@ $shadow-color:  #204046;
         top: 0;
         border-left: $outline-width black solid;
         border-right: $outline-width black solid;
+    }
+}
+
+
+// /* Phones */
+// @media only screen and (max-width: 480px) {}
+
+// /* portrait tablets and large phones, 480px and up */
+// @media only screen and (min-width: 480px) {}
+
+// /* landscape tablets, 768px and up */
+// @media only screen and (min-width: 768px) {}
+
+/* laptops/desktops, 992px and up */
+@media only screen and (min-width: 1024px) {
+    .home-page {
+        font-size: 1.5rem;
+    }
+    @keyframes rotatingicon {
+        0% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.3) rotate(0deg)}
+        100% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.3) rotate(359deg)}
+    }
+}
+
+/* large laptops and desktops, 1200px and up */
+@media only screen and (min-width: 1200px) {
+    .eightbit-btn {
+        width: 70%;
     }
 }

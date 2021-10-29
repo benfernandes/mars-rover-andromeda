@@ -23,7 +23,7 @@ function Home() {
                     MAR
                     <div className="section-subtitle">MARCH AWAKENS ROMANCE</div>
                 </div>
-                <Link to="/earth">
+                <Link to="/mars">
                     <img className="mars-icon" src={marsImg} />
                 </Link>
                 <div className="section-subtitle">SEE IMAGES CAPTURED BY ROVERS ON MARS, BY TELESCOPES FROM EARTH ETC.</div>
