@@ -10,7 +10,6 @@ export function PhotoOrVideo(videoPotd: iPotdVideoData) {
             </iframe>
         )
     }
-
     return (
         <img className="DailyImage" src={videoPotd.url}></img>
     )
