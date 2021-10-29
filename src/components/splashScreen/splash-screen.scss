@@ -26,7 +26,7 @@
 .earthSplash {
     margin: 15% 0;
     animation-name: rotation;
-    animation-duration: 9s;
+    animation-duration: 8s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -48,7 +48,7 @@
     5% {color: #723F78;}  // clear text
 
     100% {
-        transform: translate(-40vw, -30vh) scale(0.2);
+        transform: translate(-40vw, calc(130px - 50vh)) scale(0.2);
         color: #723F78;
     }
   }
