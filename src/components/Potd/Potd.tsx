@@ -11,7 +11,7 @@ export function PhotoOrVideo(videoPotd: iPotdVideoData) {
         )
     } else {
         return (
-            <img className="daily-image" src={videoPotd.url}></img>
+            <img className="daily-image" alt="" src={videoPotd.url}/>
         )
     }
 }
@@ -31,7 +31,7 @@ export function DailyPhoto() {
 
     if (dataPotd === null) {
         return (
-            <div>Data Loading</div>
+            <p>Data Loading</p>
         )
     }
 
@@ -44,7 +44,7 @@ export function DailyPhoto() {
                 </section>
             </section>
             <section className="explanation-section">
-                <div className="explanation-text">{dataPotd.explanation}</div>
+                <p className="explanation-text">{dataPotd.explanation}</p>
             </section>
         </div>
     );
