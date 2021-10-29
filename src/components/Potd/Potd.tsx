@@ -6,7 +6,8 @@ export function PhotoOrVideo(videoPotd: iPotdVideoData) {
     if (videoPotd.media_type === "video") {
         return (
             <video
-                className="daily-image" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
+                className="daily-image" 
+                src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
             </video>
         )
     } else {
