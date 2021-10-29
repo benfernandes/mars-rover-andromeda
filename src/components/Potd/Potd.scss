@@ -6,27 +6,6 @@
   padding: 30px;
 }
 
-@media only screen and (min-width: 280px){
-  .photo-of-the-day {width: 90%}
-}
-
-@media only screen and (min-width: 320px){
-  .photo-of-the-day {width: 90%}
-}
-
-@media only screen and (min-width: 410px){
-  .photo-of-the-day {width: 90%}
-}
-
-@media only screen and (min-width: 800px){
-  .photo-of-the-day {width: 70%}
-}
-
-@media only screen and (min-width: 800px){
-  .photo-of-the-day {padding: 50px}
-}
-
-
 .daily-image {
   z-index: 1;
   border: none;
@@ -63,14 +42,6 @@
   100% {opacity:1;}
 }
 
-[class*="DailyImage"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px){
-  .DailyImage {width: 80%}
-}
-
 .metadata-section {
   position: absolute;
   background-color: black;
@@ -93,21 +64,6 @@
   -ms-animation: fadeIn 5s;
 }
 
-[class*="ImageTitle"] {
-  font-size: medium;
-}
-
-@media only screen and (min-width: 280px){
-  .image-title {font-size: x-small}
-}
-
-@media only screen and (min-width: 320px){
-  .image-title {font-size: small}
-}
-
-@media only screen and (min-width: 410px){
-  .image-title {font-size: medium}
-}
 
 .image-section {
   position: relative;
@@ -137,7 +93,10 @@
     font-size: large;
     width: 90%;
     text-align: center;
-}
+  }
+  .image-title {font-size: x-small}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
 }
 
 @media only screen and (min-width: 320px){
@@ -146,6 +105,9 @@
     width: 100%;
     text-align: center;
 }
+  .image-title {font-size: small}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
 }
 
 @media only screen and (min-width: 410px){
@@ -154,6 +116,9 @@
     width: 90%;
     text-align: center;
 }
+  .image-title {font-size: medium}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
 }
 
 @media only screen and (min-width: 800px){
@@ -162,4 +127,8 @@
     width: 80%;
     text-align: justify;
 }
+  .image-title {font-size: medium}
+  .photo-of-the-day {width: 70%}
+  .daily-image {width: 80%}
+  .photo-of-the-day {padding: 50px}
 }
