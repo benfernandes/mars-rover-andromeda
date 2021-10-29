@@ -40,7 +40,7 @@ export function DailyPhoto() {
             <section className="image-section">
                 <PhotoOrVideo media_type={dataPotd.media_type} url={dataPotd.url}/>
                 <section className="metadata-section">
-                    <div className="image-title">{dataPotd.title}</div>
+                    <h3 className="image-title">{dataPotd.title}</h3>
                 </section>
             </section>
             <section className="explanation-section">
