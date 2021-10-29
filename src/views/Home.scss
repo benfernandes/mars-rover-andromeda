@@ -9,6 +9,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 9999;
+    animation: fadein 2s;
 }
 
 .home-page {
@@ -35,6 +36,7 @@ section {
 .section-title {
     padding-top: 110px;
     font-size: 1.5rem;
+    animation: fadein 2s;
 }
 
 .earth-icon {
@@ -53,12 +55,20 @@ section {
     100% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.2) rotate(359deg)}
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .section-subtitle {
     margin-top: 15px;
     font-size: 0.75rem;
+    animation: fadein 2s;
 }
 
 .scroll-down-wrapper {
+    opacity: 0;
+    animation: fadein 2s 2s forwards;
     margin-bottom: 15px;
     color: #FC7536;
 }
