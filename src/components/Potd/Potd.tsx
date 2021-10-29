@@ -5,9 +5,9 @@ import './Potd.scss';
 export function PhotoOrVideo(videoPotd: iPotdVideoData) {
     if (videoPotd.media_type == "video") {
         return (
-            <iframe
+            <video
                 className="DailyImage" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
-            </iframe>
+            </video>
         )
     }
     return (
