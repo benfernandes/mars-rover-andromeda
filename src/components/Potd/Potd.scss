@@ -132,15 +132,19 @@
 }
 
 @media only screen and (min-width: 280px){
-  .ExplanationText {font-size: large}
-  .ExplanationText {width: 90%}
-  .ExplanationText {text-align: center;}
+
+  .ExplanationText {
+    font-size: large;
+    width: 90%;
+    text-align: center;
+}
 }
 
 @media only screen and (min-width: 320px){
-  .ExplanationText {width: 100%}
-  .ExplanationText {font-size: large}
-  .ExplanationText {text-align: center;}
+  .ExplanationText {
+    font-size: large;
+    width: 100%;
+    text-align: center;
 }
 
 @media only screen and (min-width: 410px){
