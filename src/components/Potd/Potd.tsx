@@ -3,7 +3,7 @@ import {GetDataMainPhoto, iPotdData, iPotdVideoData} from "../../api/potd";
 import './Potd.scss';
 
 export function PhotoOrVideo(videoPotd: iPotdVideoData) {
-    if (videoPotd.media_type == "video") {
+    if (videoPotd.media_type === "video") {
         return (
             <video
                 className="DailyImage" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
