@@ -60,6 +60,11 @@ section {
     to   { opacity: 1; }
 }
 
+@keyframes scrolldown {
+    from { opacity: 0.25; transform: translateY(0);}
+    to   { opacity: 1; transform: translateY(10px);}
+}
+
 .section-subtitle {
     margin-top: 15px;
     font-size: 0.75rem;
@@ -68,7 +73,11 @@ section {
 
 .scroll-down-wrapper {
     opacity: 0;
-    animation: fadein 2s 2s forwards;
+    animation: scrolldown 1s 2s forwards infinite alternate;
     margin-bottom: 15px;
     color: #FC7536;
+}
+
+.scroll-down {
+    width: 30px;
 }

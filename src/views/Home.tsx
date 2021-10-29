@@ -23,7 +23,7 @@ function Home() {
                     <div className="section-subtitle">MARCH AWAKENS ROMANCE</div>
                 </div>
             </section>   
-            <Link className="nav-button" to="/earth">
+            <Link to="/earth">
                 <img className="earth-icon" src={earthImg} />
             </Link>
         </main>
