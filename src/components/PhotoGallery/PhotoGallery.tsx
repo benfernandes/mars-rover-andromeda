@@ -34,7 +34,6 @@ export default function PhotoGallery(props: IPhotoGalleryProps) {
 
     return (
         <div className="PhotoGalleryContainer">
-            {console.log(photoIndex)}
             {props.images.length > 0 ?
                 <>
                     <span className="ArrowBase LeftArrow" onMouseDown={() => IncrementPhotoIndex(-1)}>&lt;</span>
