@@ -9,8 +9,9 @@ import Home from './views/Home';
 import Earth from "./views/Earth";
 import Mars from "./views/Mars";
 import NotFound from "./views/NotFound";
+import withSplashScreen from './components/splashScreen/withSplashScreen';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Router>
@@ -26,5 +27,4 @@ function App() {
   );
 }
 
-
-export default App;
+export default withSplashScreen(App);
