@@ -6,8 +6,9 @@ import {
 import './App.scss';
 import Navbar from "./components/navbar/Navbar";
 import Home from './views/Home';
+import withSplashScreen from './components/splashScreen/withSplashScreen';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Router>
@@ -28,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default withSplashScreen(App);
