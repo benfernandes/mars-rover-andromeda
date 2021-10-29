@@ -8,7 +8,7 @@ enum Rover{
 
 export async function GetImagesByQuantity(quantity: number) {
     let startSol = quantity * 1.2; // we are giving the API more days than pictures we're looking for to make sure we return enough.
-    let apiCall: string = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?sol=${startSol}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
+    let apiCall = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?sol=${startSol}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
 
     let resultsArray : string[] = new Array(quantity).fill('');
     let toJson;
@@ -29,6 +29,3 @@ export async function GetImagesByQuantity(quantity: number) {
 
     return resultsArray;
 }
-
-
-

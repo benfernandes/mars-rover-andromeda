@@ -8,7 +8,6 @@ import {
 import './App.scss';
 import Navbar from './components/navbar/navbar';
 import Home from './views/Home';
-import { getImagesByRover } from './api/MarsRoverAPI';
 
 function App() {
   return (
