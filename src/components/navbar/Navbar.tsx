@@ -14,18 +14,18 @@ function Navbar() {
         return (
             <ul className="nav-list" >
                 <li>
-                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/">
+                    <Link className="nav-button" onClick={props.onClick} to="/">
                         Home
                     </Link>
                 </li>
                 <li>
-                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/earth">
+                    <Link className="nav-button" onClick={props.onClick} to="/earth">
                         Earth
                         <img className="planet-icon" src="images/earth.png" alt="earth" />
                     </Link>
                 </li>
                 <li>
-                    <Link className="nav-button" onClick={() => setNavBarOpen(false)} to="/mars">
+                    <Link className="nav-button" onClick={props.onClick} to="/mars">
                         Mars
                         <img className="planet-icon" src="images/mars.png" alt="mars" />
                     </Link>
@@ -33,25 +33,19 @@ function Navbar() {
             </ul>
         );
     }
-    
-    //TODO Delete this
-    function toggleNavbar() {
-        console.log("toggle");
-        setNavBarOpen(current => !current);
-    }
 
     return (
         <div className="nav-and-logo-container">
-            <img src="https://png.pngitem.com/pimgs/s/388-3882910_graphics-hd-png-download.png" alt="Bendromeda logo" height="64"/>
+            <img className="logo-img" src="images/BendromedaLogo_Trans.png" alt="Bendromeda logo"/>
             <nav className={`mobile-navbar ${navbarOpen ? "open" : "closed"}`}>
-                <button className="nav-button hamburger-button" onClick={toggleNavbar}>
-                    <GoThreeBars color="white" size="22"/>
-                </button>
-                <Links onClick={toggleNavbar}/>
+                <Links onClick={() => setNavBarOpen(false)}/>
             </nav>
             <nav className="desktop-navbar">
                 <Links onClick={() => {}}/>
             </nav>
+            <button className="nav-button hamburger-button" onClick={() => setNavBarOpen(!navbarOpen)}>
+                <GoThreeBars color="white" size="22"/>
+            </button>
         </div>
     );
 }
