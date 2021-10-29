@@ -2,7 +2,6 @@
   padding-top: 50px;
 }
 
-
 .prettyBoxShadow {
   box-shadow: rgba(2,23,61,0.4) -5px 5px, rgba(2,23,61, 0.3) -10px 10px, rgba(2,23,61, 0.2) -15px 15px, rgba(2,23,61, 0.1) -20px 20px, rgba(2,23,61, 0.05) -25px 25px;
   transition-duration: 0.5s;
@@ -21,8 +20,7 @@
   rgba(2,23,61, 0.05) -40px 40px;
 }
 
-[class*="earthimage"] {
-  width: 70%;
+.earthimage {
   margin-bottom: 30px;
 }
 
@@ -38,7 +36,6 @@
     width: 35%;
   }
 }
-
 
 .EarthInvestmentInput {
   padding: 12px 20px;
