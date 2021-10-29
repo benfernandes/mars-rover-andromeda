@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.nav-and-logo-container {  // for future navbar
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    animation: fadein 2s;
+}
+
+.home-page {
+    color: #FBFAF8;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 20px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+section {
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+
+.first-section {
+    background-color: #723F78;
+}
+
+.last-section {
+    background-color: #FC7536;
+    padding-bottom: 2rem;
+}
+
+.section-title {
+    padding-top: 110px;
+    font-size: 125%;
+    animation: fadein 2s;
+}
+
+.earth-icon {
+    position: absolute;
+    left: calc(50vw - 113px);
+    top: calc(50vh - 113px);
+
+    animation-name: rotatingicon;
+    animation-timing-function: linear;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotatingicon {
+    0% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.2) rotate(0deg)}
+    100% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.2) rotate(359deg)}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes scrolldown {
+    from { opacity: 0.25; transform: translateY(0);}
+    to   { opacity: 1; transform: translateY(10px);}
+}
+
+@keyframes rotation {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(359deg)}
+}
+
+.section-subtitle {
+    margin-top: 15px;
+    font-size: 75%;
+    animation: fadein 2s;
+}
+
+.scroll-down-wrapper {
+    opacity: 0;
+    animation: scrolldown 1s 2s forwards infinite alternate;
+    margin-bottom: 15px;
+    color: #FC7536;
+}
+
+.scroll-down {
+    width: 30px;
+}
+
+.mars-icon {
+    margin: 2rem 0;
+    max-height: 40vh;
+    height: 70vw;
+    animation: rotation 25s infinite linear;
+}
+
+
+// Pasted and tweaked code
+
+$outline-width: 6px;
+$shadow-width: 4px;
+
+$button-background: #468C98;
+$sec-button-background: #40808C;
+$shadow-color:  #204046;
+
+.eightbit-btn {
+    animation: fadein 2s;
+    width: 90%;
+    margin: 15px 50px 0;
+
+    background: $button-background;
+    position: relative;
+    padding: 20px;
+    text-decoration: none; 
+    color: #FBFAF8;
+    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $shadow-color;
+
+    &:hover,
+    &:focus {
+        background: $sec-button-background;
+        box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $shadow-color;
+    }
+
+    &:active {
+        box-shadow: inset $shadow-width $shadow-width 0px 0px $shadow-color;
+    }
+
+    &:before,
+    &:after {
+    content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+    }
+
+    &:before {
+        top: -$outline-width;
+        left: 0;
+        border-top: $outline-width black solid;
+        border-bottom: $outline-width black solid;
+    }
+
+    &:after {
+        left: -$outline-width;
+        top: 0;
+        border-left: $outline-width black solid;
+        border-right: $outline-width black solid;
+    }
+}
+
+
+// /* Phones */
+// @media only screen and (max-width: 480px) {}
+
+// /* portrait tablets and large phones, 480px and up */
+// @media only screen and (min-width: 480px) {}
+
+// /* landscape tablets, 768px and up */
+// @media only screen and (min-width: 768px) {}
+
+/* laptops/desktops, 992px and up */
+@media only screen and (min-width: 1024px) {
+    .home-page {
+        font-size: 1.5rem;
+    }
+    @keyframes rotatingicon {
+        0% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.3) rotate(0deg)}
+        100% {transform: translate(-40vw, calc(130px - 50vh)) scale(0.3) rotate(359deg)}
+    }
+}
+
+/* large laptops and desktops, 1200px and up */
+@media only screen and (min-width: 1200px) {
+    .eightbit-btn {
+        width: 70%;
+    }
+}
