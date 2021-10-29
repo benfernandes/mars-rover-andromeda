@@ -1,13 +1,11 @@
 import axios, {AxiosResponse} from 'axios';
 
 
-export interface iPotdData {
+export interface iPotdData extends iPotdVideoData {
     copyright: string;
     date: Date;
     explanation: string;
-    media_type: string;
     title: string;
-    url: string;
 }
 
 export interface iPotdVideoData {
