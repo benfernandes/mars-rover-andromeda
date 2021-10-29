@@ -3,10 +3,7 @@
   display: block;
   margin: auto;
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  padding: 5%;
-}
-
-[class*="PhotoOfTheDay"] {
+  padding: 30px;
   width: 70%;
 }
 
@@ -25,6 +22,11 @@
 @media only screen and (min-width: 800px){
   .PhotoOfTheDay {width: 70%}
 }
+
+@media only screen and (min-width: 800px){
+  .PhotoOfTheDay {padding: 50px}
+}
+
 
 .DailyImage {
   z-index: 1;
