@@ -1,0 +1,131 @@
+.photo-of-the-day {
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  padding: 30px;
+}
+
+.daily-image {
+  z-index: 1;
+  border: none;
+  filter: brightness(.4);
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.metadata-section {
+  position: absolute;
+  background-color: black;
+  color: white;
+  opacity: 0.5;
+  bottom: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.image-section {
+  position: relative;
+  margin: 10px;
+}
+
+.explanation-text{
+  color: darkgrey;
+  text-align: justify;
+  margin: auto;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+[class*="ExplanationText"] {
+  font-size: medium;
+  width: 80%;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 280px){
+  .explanation-text {
+    font-size: large;
+    width: 90%;
+    text-align: center;
+  }
+  .image-title {font-size: x-small}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
+}
+
+@media only screen and (min-width: 320px){
+  .explanation-text {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+}
+  .image-title {font-size: small}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
+}
+
+@media only screen and (min-width: 410px){
+  .explanation-text {
+    font-size: large;
+    width: 90%;
+    text-align: center;
+}
+  .image-title {font-size: medium}
+  .photo-of-the-day {width: 90%}
+  .daily-image {width: 80%}
+}
+
+@media only screen and (min-width: 800px){
+  .explanation-text {
+    font-size: medium;
+    width: 80%;
+    text-align: justify;
+}
+  .image-title {font-size: medium}
+  .photo-of-the-day {width: 70%}
+  .daily-image {width: 80%}
+  .photo-of-the-day {padding: 50px}
+}
