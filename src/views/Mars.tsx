@@ -1,10 +1,16 @@
 import "./Home.scss"
 import "./Mars.scss"
 import PhotoGallery from "../components/PhotoGallery/PhotoGallery";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import { GetImagesByQuantity } from "../api/MarsRoverAPI";
 
 function Mars() {
-    const [images, setImages] = useState<string[]>(["https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG", "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG", "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG",])
+    const [images, setImages] = useState<string[]>([]);
+    useEffect(() => {
+        GetImagesByQuantity(10).then((res) => {
+            setImages(res);
+        })
+    }, [])
     return (
         <main className="home-page">
             <div className="last-section section-mars">

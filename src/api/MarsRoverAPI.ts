@@ -25,6 +25,7 @@ export async function GetImagesByQuantity(quantity: number) {
     }
 
     function addPhotosToArray(toJson : any) {
+        console.log(toJson);
         for(let i = 0; i < toJson.photos.length; i ++) {
             if(photosAdded >= quantity) break; // the results array has been filled.
             resultsArray[i] = toJson.photos[i].img_src;
