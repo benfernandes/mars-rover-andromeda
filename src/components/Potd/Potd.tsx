@@ -6,12 +6,12 @@ export function PhotoOrVideo(videoPotd: iPotdVideoData) {
     if (videoPotd.media_type === "video") {
         return (
             <video
-                className="DailyImage" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
+                className="daily-image" src={videoPotd.url + (videoPotd.url.includes("?") ? "&" : "?") + "controls=0"}>
             </video>
         )
     } else {
         return (
-            <img className="DailyImage" src={videoPotd.url}></img>
+            <img className="daily-image" src={videoPotd.url}></img>
         )
     }
 }
@@ -36,15 +36,15 @@ export function DailyPhoto() {
     }
 
     return (
-        <div className="PhotoOfTheDay">
-            <section className="ImageSection">
+        <div className="photo-of-the-day">
+            <section className="image-section">
                 <PhotoOrVideo media_type={dataPotd.media_type} url={dataPotd.url}/>
-                <section className="MetadataSection">
-                    <div className={"ImageTitle"}>{dataPotd.title}</div>
+                <section className="metadata-section">
+                    <div className={"image-title"}>{dataPotd.title}</div>
                 </section>
             </section>
-            <section className="ExplanationSection">
-                <div className="ExplanationText">{dataPotd.explanation}</div>
+            <section className="explanation-section">
+                <div className="explanation-text">{dataPotd.explanation}</div>
             </section>
         </div>
     );

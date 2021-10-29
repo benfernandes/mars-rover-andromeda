@@ -1,4 +1,4 @@
-.PhotoOfTheDay {
+.photo-of-the-day {
   box-sizing: border-box;
   display: block;
   margin: auto;
@@ -7,27 +7,27 @@
 }
 
 @media only screen and (min-width: 280px){
-  .PhotoOfTheDay {width: 90%}
+  .photo-of-the-day {width: 90%}
 }
 
 @media only screen and (min-width: 320px){
-  .PhotoOfTheDay {width: 90%}
+  .photo-of-the-day {width: 90%}
 }
 
 @media only screen and (min-width: 410px){
-  .PhotoOfTheDay {width: 90%}
+  .photo-of-the-day {width: 90%}
 }
 
 @media only screen and (min-width: 800px){
-  .PhotoOfTheDay {width: 70%}
+  .photo-of-the-day {width: 70%}
 }
 
 @media only screen and (min-width: 800px){
-  .PhotoOfTheDay {padding: 50px}
+  .photo-of-the-day {padding: 50px}
 }
 
 
-.DailyImage {
+.daily-image {
   z-index: 1;
   border: none;
   filter: brightness(.4);
@@ -71,7 +71,7 @@
   .DailyImage {width: 80%}
 }
 
-.MetadataSection {
+.metadata-section {
   position: absolute;
   background-color: black;
   color: white;
@@ -82,7 +82,7 @@
 
 }
 
-.ImageTitle {
+.image-title {
   position: absolute;
   bottom: 20px;
   width: 100%;
@@ -98,23 +98,23 @@
 }
 
 @media only screen and (min-width: 280px){
-  .ImageTitle {font-size: x-small}
+  .image-title {font-size: x-small}
 }
 
 @media only screen and (min-width: 320px){
-  .ImageTitle {font-size: small}
+  .image-title {font-size: small}
 }
 
 @media only screen and (min-width: 410px){
-  .ImageTitle {font-size: medium}
+  .image-title {font-size: medium}
 }
 
-.ImageSection {
+.image-section {
   position: relative;
   margin: 10px;
 }
 
-.ExplanationText{
+.explanation-text{
   color: darkgrey;
   text-align: justify;
   margin: auto;
@@ -133,7 +133,7 @@
 
 @media only screen and (min-width: 280px){
 
-  .ExplanationText {
+  .explanation-text {
     font-size: large;
     width: 90%;
     text-align: center;
@@ -141,20 +141,25 @@
 }
 
 @media only screen and (min-width: 320px){
-  .ExplanationText {
+  .explanation-text {
     font-size: large;
     width: 100%;
     text-align: center;
 }
+}
 
 @media only screen and (min-width: 410px){
-  .ExplanationText {width: 90%}
-  .ExplanationText {font-size: large}
-  .ExplanationText {text-align: center;}
+  .explanation-text {
+    font-size: large;
+    width: 90%;
+    text-align: center;
+}
 }
 
 @media only screen and (min-width: 800px){
-  .ExplanationText {width: 80%;}
-  .ExplanationText {font-size: medium}
-  .ExplanationText {text-align: justify;}
+  .explanation-text {
+    font-size: medium;
+    width: 80%;
+    text-align: justify;
+}
 }
