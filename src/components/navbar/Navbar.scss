@@ -46,7 +46,7 @@ $desktop-navbar-min-height: 5em;
   border-bottom-left-radius: 6px;
   border: 1px solid white;
   border-right: none;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
   .nav-list {
     visibility: visible;
     width: 200px;
@@ -66,6 +66,7 @@ $desktop-navbar-min-height: 5em;
   &.closed {
     visibility: hidden;
     opacity: 0;
+    top: -500px;
   }
   .nav-list {
     padding: 0;
