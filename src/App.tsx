@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/earth" component={Earth} />
           <Route path="/mars" component={Mars} />
           <Route component={NotFound} />
