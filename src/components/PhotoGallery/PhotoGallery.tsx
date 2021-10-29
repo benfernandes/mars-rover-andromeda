@@ -19,7 +19,7 @@ export default function PhotoGallery(props: IPhotoGalleryProps) {
     function IncrementPhotoIndex(index: number) {
         setHeroImageClass("PhotoGalleryHeroImage FadeOutImage")
         setTimeout(() => {
-            setPhotoIndex(prevState => (prevState + index) % props.images.length);
+            setPhotoIndex(prevState => mod((prevState + index), (props.images.length)));
             setHeroImageClass("PhotoGalleryHeroImage FadeInImage")
         }, 400)
     }
@@ -70,3 +70,7 @@ function Thumbnails(props: IPhotoGalleryBottomProps) {
     </div>
 }
 
+
+function mod(a: number, n:number) {
+    return a - (n * Math.floor(a/n));
+}
