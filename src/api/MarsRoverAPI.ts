@@ -1,5 +1,6 @@
-
 // As we scale we can offer options of rover, camera angle or date search params.
+import * as process from "process";
+
 enum Rover{
     Curiosity = 'curiosity',
     Opportunity = 'opportunity',
@@ -7,25 +8,41 @@ enum Rover{
 }
 
 export async function GetImagesByQuantity(quantity: number) {
-    let startSol = quantity * 1.2; // we are giving the API more days than pictures we're looking for to make sure we return enough.
-    let apiCall = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?sol=${startSol}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
+    if(quantity > 400) quantity = 400; // hard limiting to photos per call.
 
     let resultsArray : string[] = new Array(quantity).fill('');
-    let toJson;
-    let returnedImagesArrayLength = 0;
 
-    // The API does not allow for requesting a specific quantity of images, to get around this we make sure we get more than we need.
-    // We then only populate the results array with how many we need.
-    while(returnedImagesArrayLength < quantity) {
+    let photosAdded = 0;
+    let daysSearchedForPhotos = 0;
+
+    // We start at today, and work backwards in time until we have enough photos to fulfill the request
+    while(photosAdded < quantity){
+        let apiCall = getApiCall(daysSearchedForPhotos)
         const response = await fetch(apiCall);
-        toJson = await response.json();
-        startSol += 10; // we're going to increase this till we have enough photos.
-        returnedImagesArrayLength = toJson.photos.length;
+        const toJson = await response.json();
+        daysSearchedForPhotos++;
+        addPhotosToArray(toJson);
     }
 
-    for(let i = 0; i < quantity; i ++) {
-        resultsArray[i] = toJson.photos[i].img_src;
+    function addPhotosToArray(toJson : any) {
+        for(let i = 0; i < toJson.photos.length; i ++) {
+            if(photosAdded >= quantity) break; // the results array has been filled.
+            resultsArray[i] = toJson.photos[i].img_src;
+            photosAdded++;
+        }
     }
 
     return resultsArray;
+}
+
+function getApiCall(backdatedDays : number) {
+    let today = new Date();
+    today.setDate(today.getDate() - backdatedDays);
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() +1).padStart(2,'0');
+    let yyyy = today.getFullYear();
+    let apiDate = `${yyyy}-${mm}-${dd}`;
+
+    let result = `https://api.nasa.gov/mars-photos/api/v1/rovers/${Rover.Curiosity}/photos?earth_date=${apiDate}&api_key=${process.env.REACT_APP_MARS_ROVER_API_KEY}`;
+    return result;
 }
