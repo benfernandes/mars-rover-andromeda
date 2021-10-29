@@ -1,5 +1,5 @@
 import "./Earth.scss"
-// import EarthSatteliteFunction
+import {SelectEarthInvestmentArea} from '../components/EarthInvestment/EarthInvestment';
 
 function Earth() {
     return (
@@ -9,6 +9,7 @@ function Earth() {
                     EARTH
                     <div className="section-subtitle">VIEW PHOTOS OF EARTH</div>
                 </div>
+                <SelectEarthInvestmentArea/>
             </section>
         </main>
     )
