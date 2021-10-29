@@ -14,7 +14,7 @@ export interface iPotdVideoData {
     url: string;
 }
 
-const defaultObject:iPotdData = {
+const defaultObject: iPotdData = {
     copyright: "Pic from google",
     date: new Date(),
     explanation: "This is mars!",
@@ -23,16 +23,11 @@ const defaultObject:iPotdData = {
     url: "api/mars.jpg"
 }
 
-export const GetDataMainPhoto = 
-    new Promise<iPotdData>(async(resolve, reject) => {
-        var response: AxiosResponse<iPotdData>
-        try {
-            response = await axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-            resolve(response.data);
-        } catch (error) {
-            //Todo
-            console.log(error)
-            reject(defaultObject);
-        }
-    })
-
+export const GetDataMainPhoto =  async () => {
+    try {
+        let response = await axios.get<iPotdData>("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+        return response.data;
+    } catch (error) {
+        return defaultObject;
+    }
+}

@@ -20,7 +20,8 @@ export function DailyPhoto() {
     const [dataPotd, dataPotdSet] = useState<iPotdData | null>(null);
 
     useEffect(() => {
-        GetDataMainPhoto.then((response) => {
+        GetDataMainPhoto().then((response) => {
+            // response.
             dataPotdSet(response)
         }).catch((defaultObject) => {
             dataPotdSet(defaultObject)
