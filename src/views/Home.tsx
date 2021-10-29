@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import scrollDown from "../images/scrolldown.png"
+import earthImg from "../images/earth.png"
 import "./Home.scss"
 
 
@@ -21,6 +23,9 @@ function Home() {
                     <div className="section-subtitle">MARCH AWAKENS ROMANCE</div>
                 </div>
             </section>   
+            <Link className="nav-button" to="/earth">
+                <img className="earth-icon" src={earthImg} />
+            </Link>
         </main>
     )
 }
