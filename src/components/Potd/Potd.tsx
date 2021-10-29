@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {GetDataMainPhoto, iPotdData, iPotdVideoData} from "../../api/potd";
 import './Potd.scss';
 
-export function PhotoOrVideo(videoPotd: iPotdVideoData) {
+function PhotoOrVideo(videoPotd: iPotdVideoData) {
     if (videoPotd.media_type === "video") {
         return (
             <video
