@@ -8,7 +8,7 @@ import "./Home.scss"
 function Home() {
     return (
         <main className="home-page">
-            <section className="first-section">
+            <section className="first-section temu">
                 <div className="section-title">
                     EXPLORE
                     <div className="section-subtitle">THE KNOWN UNIVERSE</div>

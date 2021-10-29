@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.nav-and-logo-container {  // for future navbar
-    position: sticky;
-    top: 0;
-}
-
 nav {
     position: fixed;
     top: 0;
@@ -17,7 +12,6 @@ nav {
     font-family: 'Press Start 2P', cursive;
     line-height: 20px;
     font-size: 1rem;
-    overflow: hidden;
 }
 
 section {
@@ -32,6 +26,11 @@ section {
 
 .first-section {
     background-color: #723F78;
+    
+}
+
+.temu {
+height: 100vh;
 }
 
 .last-section {
@@ -40,7 +39,7 @@ section {
 }
 
 .section-title {
-    padding-top: 110px;
+    padding-top: 135px;
     font-size: 125%;
     animation: fadein 2s;
 }

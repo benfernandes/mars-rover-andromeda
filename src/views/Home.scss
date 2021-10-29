@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.nav-and-logo-container {  // for future navbar
-    position: sticky;
-    top: 0;
-}
-
-nav {
+nav-and-logo-container {
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -17,11 +12,11 @@ nav {
     font-family: 'Press Start 2P', cursive;
     line-height: 20px;
     font-size: 1rem;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 section {
-    height: 100vh;
+    // height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -40,7 +35,7 @@ section {
 }
 
 .section-title {
-    padding-top: 110px;
+    padding-top: 125px;
     font-size: 125%;
     animation: fadein 2s;
 }
