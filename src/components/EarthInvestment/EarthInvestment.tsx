@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './EarthInvestment.scss';
 
 export function SelectEarthInvestmentArea() {
-
+    
     const baseURL = "https://api.nasa.gov/planetary/earth/imagery";
     const [lon, setLon] = useState("-95.33");
     const [lat, setLat] = useState("29.78");
@@ -30,7 +30,6 @@ export function SelectEarthInvestmentArea() {
         setDate(newValue);
     }
 
-
     return (
         <div className="earthContainer">
             <img src={fullURL} className="earthimage prettyBoxShadow" onError={(e) => {setFullUrl("https://media.istockphoto.com/vectors/space-exploration-background-design-modern-gradient-vector-template-vector-id1178088975?b=1&k=20&m=1178088975&s=170667a&w=0&h=bkUTh-FJixPpdROIlpj4k-7838MAeSMLinnWj8Rc5ys=")}}></img>
@@ -47,10 +46,5 @@ export function SelectEarthInvestmentArea() {
                 <input className="EarthInvestmentInput" type={"date"} value={date} onChange={handleChangeDate}/>
             </div>
         </div>
-
-
     )
 }
-
-
-
